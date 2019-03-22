@@ -176,6 +176,9 @@ class Api
             return !is_null($val);
         });
 
+		//remove leading / from $path to avoid URLs that look like like /client/v4//foo/bar
+		$path = preg_replace("#^/#",'',$path);
+		
         $url = 'https://api.cloudflare.com/client/v4/'.$path;
 
         $default_curl_options = [
