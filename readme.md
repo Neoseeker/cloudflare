@@ -1,3 +1,14 @@
+Notes about this fork:
+
+We made this fork because we encountered a problem where Cloudflare returns a 404 with errorcode 1000 if you try to run Zone\Firewall\AccessRules->rules().  It's possible this problem is new on CF in 2019.
+
+The problem is that the original code always has a double / in the URL request paths.
+
+Below is the original readme.md:
+
+-----
+
+
 ## Note: Please use the official Cloudflare PHP package ##
 https://github.com/cloudflare/cloudflare-php
 
